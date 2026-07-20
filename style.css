@@ -189,3 +189,28 @@ h2 {
     padding: 3rem 0;
   }
 }
+.work-card {
+  margin-top: 2rem;
+  padding: 2rem;
+  border: 1px solid #2a2a2a;
+  background: #0a0a0a;
+}
+
+.work-card h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.work-card p {
+  margin: 1rem 0;
+}
+
+.work-card a {
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid #666666;
+}
+
+.work-card a:hover {
+  border-bottom-color: #ffffff;
+}
