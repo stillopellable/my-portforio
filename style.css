@@ -194,6 +194,8 @@ h2 {
   padding: 2rem;
   border: 1px solid #2a2a2a;
   background: #0a0a0a;
+  border-radius: 12px;
+  transition: all 0.3s ease;
 }
 
 .work-card h3 {
@@ -213,4 +215,9 @@ h2 {
 
 .work-card a:hover {
   border-bottom-color: #ffffff;
+}
+.work-card:hover {
+  transform: translateY(-6px);
+  border-color: #666666;
+  box-shadow: 0 20px 40px rgba(255,255,255,0.05);
 }
