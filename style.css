@@ -22,14 +22,16 @@ body {
 a {
   color: #fff;
   text-decoration: none;
-  transition: opacity 0.3s ease;
+  transition: opacity .3s ease;
 }
 
 a:hover {
-  opacity: 0.6;
+  opacity: .6;
 }
 
-/* Hero */
+/* =========================
+   Hero
+========================= */
 
 .hero {
   min-height: 60vh;
@@ -45,47 +47,59 @@ a:hover {
 }
 
 h1 {
-  font-size: clamp(1.4rem, 4vw, 2rem);
+  font-size: clamp(1.4rem,4vw,2rem);
   font-weight: 400;
-  letter-spacing: 0.04em;
+  letter-spacing: .04em;
   line-height: 1.5;
 }
 
 .subtitle {
   margin-top: 1.5rem;
-  font-size: clamp(0.85rem, 2.5vw, 1rem);
-  opacity: 0.7;
-  letter-spacing: 0.02em;
+  font-size: clamp(.85rem,2.5vw,1rem);
+  opacity: .7;
+  letter-spacing: .02em;
 }
 
-/* Nav */
+.hero-subtitle {
+  margin-top: 1.25rem;
+  font-size: .85rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  opacity: .45;
+}
+
+/* =========================
+   Navigation
+========================= */
 
 .nav {
   display: flex;
   justify-content: center;
   gap: 2.5rem;
   padding: 1.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255,255,255,.1);
+  border-bottom: 1px solid rgba(255,255,255,.1);
 }
 
 .nav a {
-  font-size: 0.85rem;
-  letter-spacing: 0.15em;
+  font-size: .85rem;
+  letter-spacing: .15em;
   text-transform: uppercase;
 }
 
-/* Sections */
+/* =========================
+   Main
+========================= */
 
 main {
-  max-width: 640px;
+  max-width: 760px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
 
 .section {
   padding: 4rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255,255,255,.08);
 }
 
 .section:last-of-type {
@@ -93,24 +107,85 @@ main {
 }
 
 h2 {
-  font-size: 0.75rem;
+  font-size: .75rem;
   font-weight: 400;
-  letter-spacing: 0.2em;
+  letter-spacing: .2em;
   text-transform: uppercase;
-  opacity: 0.5;
+  opacity: .5;
   margin-bottom: 2rem;
 }
 
 .section p {
   margin-bottom: 1.2rem;
-  font-size: 0.95rem;
+  font-size: .95rem;
 }
 
 .section p:last-child {
   margin-bottom: 0;
 }
 
-/* Essays */
+/* =========================
+   Works
+========================= */
+
+.works-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.work-card {
+  background: #0b0b0b;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 14px;
+  padding: 2rem;
+  transition:
+    transform .35s ease,
+    border-color .35s ease,
+    box-shadow .35s ease;
+}
+
+.work-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255,255,255,.22);
+  box-shadow: 0 24px 60px rgba(255,255,255,.05);
+}
+
+.work-card h3 {
+  font-size: 1.35rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.work-card p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+.work-tech {
+  font-size: .9rem;
+  opacity: .55;
+}
+
+.work-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.work-links a {
+  border-bottom: 1px solid rgba(255,255,255,.35);
+  padding-bottom: .15rem;
+  transition: .3s;
+}
+
+.work-links a:hover {
+  border-color: #fff;
+}
+
+/* =========================
+   Essays
+========================= */
 
 .essay-list {
   list-style: none;
@@ -131,41 +206,49 @@ h2 {
 .essay-title {
   display: block;
   font-size: 1rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: .5rem;
 }
 
 .essay-desc {
   display: block;
-  font-size: 0.85rem;
-  opacity: 0.55;
+  font-size: .85rem;
+  opacity: .55;
   line-height: 1.7;
 }
 
-/* Contact */
+/* =========================
+   Contact
+========================= */
 
 .contact-note {
   margin-top: 2rem;
-  font-size: 0.85rem;
-  opacity: 0.45;
+  font-size: .85rem;
+  opacity: .45;
   font-style: italic;
 }
 
-/* Footer */
+/* =========================
+   Footer
+========================= */
 
 .footer {
   text-align: center;
   padding: 3rem 1.5rem 4rem;
-  font-size: 0.75rem;
-  opacity: 0.3;
-  letter-spacing: 0.05em;
+  font-size: .75rem;
+  opacity: .3;
+  letter-spacing: .05em;
 }
 
-/* Fade-in */
+/* =========================
+   Fade In
+========================= */
 
 .fade-in {
   opacity: 0;
   transform: translateY(12px);
-  transition: opacity 1.2s ease, transform 1.2s ease;
+  transition:
+    opacity 1.2s ease,
+    transform 1.2s ease;
 }
 
 .fade-in.visible {
@@ -173,90 +256,45 @@ h2 {
   transform: translateY(0);
 }
 
-/* Mobile */
-
-@media (max-width: 480px) {
-  .hero {
-    min-height: 50vh;
-    padding-top: 3rem;
-  }
-
-  .nav {
-    gap: 1.5rem;
-  }
-
-  .section {
-    padding: 3rem 0;
-  }
-}
-.work-card {
-  margin-top: 2rem;
-  padding: 2rem;
-  border: 1px solid #2a2a2a;
-  background: #0a0a0a;
-  border-radius: 12px;
-  transition: all 0.3s ease;
-}
-
-.work-card h3 {
-  margin-top: 0;
-  font-size: 1.5rem;
-}
-
-.work-card p {
-  margin: 1rem 0;
-}
-
-.work-card a {
-  color: #ffffff;
-  text-decoration: none;
-  border-bottom: 1px solid #666666;
-}
-
-.work-card a:hover {
-  border-bottom-color: #ffffff;
-}
-.work-card:hover {
-  transform: translateY(-6px);
-  border-color: #666666;
-  box-shadow: 0 20px 40px rgba(255,255,255,0.05);
-}
 /* =========================
-   Works
+   Responsive
 ========================= */
 
-.work-card {
-  margin-top: 2rem;
-  padding: 2rem;
-  border: 1px solid #2a2a2a;
-  border-radius: 12px;
-  background: #0a0a0a;
-  transition: all 0.3s ease;
+@media (max-width:768px){
+
+  main{
+    max-width:640px;
+  }
+
+  .works-grid{
+    gap:1.5rem;
+  }
+
 }
 
-.work-card:hover {
-  transform: translateY(-6px);
-  border-color: #666;
-  box-shadow: 0 20px 40px rgba(255,255,255,0.05);
-}
+@media (max-width:480px){
 
-.work-card h3 {
-  margin-top: 0;
-  font-size: 1.5rem;
-}
+  .hero{
+    min-height:50vh;
+    padding-top:3rem;
+  }
 
-.work-card p {
-  margin: 1rem 0;
-  line-height: 1.8;
-}
+  .nav{
+    gap:1.25rem;
+    flex-wrap:wrap;
+  }
 
-.work-card a {
-  color: #fff;
-  text-decoration: none;
-  border-bottom: 1px solid #555;
-  transition: border-color .3s;
-}
+  .section{
+    padding:3rem 0;
+  }
 
-.work-card a:hover {
-  border-bottom-color: #fff;
+  .work-card{
+    padding:1.5rem;
+  }
+
+  .work-links{
+    flex-direction:column;
+    gap:.75rem;
+  }
+
 }
